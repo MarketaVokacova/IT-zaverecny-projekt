@@ -27,7 +27,7 @@ DELIMITER $$
 --
 -- Procedury
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SeradPodlePrijmeniJmena` (IN `preskocit_radku` INT, IN `zobrazit_radku` INT)   BEGIN
+CREATE PROCEDURE `SeradPodlePrijmeniJmena` (IN `preskocit_radku` INT, IN `zobrazit_radku` INT)   BEGIN
    SELECT * FROM `pojistnici`
    ORDER BY `prijmeni`, `jmeno` LIMIT preskocit_radku, zobrazit_radku;
 END$$
